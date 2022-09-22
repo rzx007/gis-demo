@@ -7,18 +7,24 @@
 import { onMounted } from 'vue'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
-import * as esriLeaflet from 'esri-leaflet'
+
 onMounted(() => {
-  const map = L.map('map').setView([51.505, -0.09], 13)
-  esriLeaflet
-    .dynamicMapLayer({
-      url: 'http://localhost:3001/_alllayers/MapServer', //地图服务地址
-      minZoom: 4, //最小缩放等级
-      f: 'image',
-      maxZoom: 21, //最大缩放等级
-      useCors: true,
-    })
-    .addTo(map)
+  const map = L.map('map').setView(L.latLng(31.99875937194732, 118.8720703125), 13)
+  L.tileLayer('http://localhost:3001/gistiles/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    minZoom: 11,
+  }).addTo(map)
+  const marker = L.marker(L.latLng(31.99875937194732, 118.8720703125)).addTo(map)
+  marker.bindPopup('<b>Hello world!</b><br>I am a popup.').openPopup()
+  const popup = L.popup()
+  function onMapClick(e) {
+    popup
+      .setLatLng(e.latlng)
+      .setContent('You clicked the map at ' + e.latlng.toString())
+      .openOn(map)
+  }
+
+  map.on('click', onMapClick)
 })
 </script>
 <style>
