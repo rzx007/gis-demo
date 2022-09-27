@@ -25,6 +25,14 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/LeafletView.vue'),
     },
+    {
+      path: '/Imgs3d',
+      name: 'Imgs3d',
+      // route level code-splitting
+      // this generates a separate chunk (Imgs3d.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Imgs3d.vue'),
+    },
   ],
 })
 

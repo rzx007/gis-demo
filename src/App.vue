@@ -14,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">OpenLayers</RouterLink>
         <RouterLink to="/leaflet">Leaflet</RouterLink>
+        <RouterLink to="/Imgs3d">3D</RouterLink>
       </nav>
     </div>
   </header>
