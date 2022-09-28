@@ -10,7 +10,7 @@ import L from 'leaflet'
 
 onMounted(() => {
   const baseTile = L.tileLayer.wms('http://10.172.246.234:7070/geoserver/cite/wms?service=WMS', {
-    layers: 'cite:natural_earth,cite:china_buildings,cite:china_water,cite:china_railways',
+    layers: 'cite:china_map',
     transparent: true,
     minZoom: 3,
   })
@@ -23,7 +23,7 @@ onMounted(() => {
   const map = L.map('map', {
     crs: L.CRS.EPSG4326,
     center: L.latLng(30.57551895461493, 114.3619241258888),
-    zoom: 7,
+    zoom: 10,
     layers: [baseTile],
   })
   const baseMaps = {
