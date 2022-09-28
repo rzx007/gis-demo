@@ -9,7 +9,7 @@ import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 
 onMounted(() => {
-  const baseTile = L.tileLayer.wms('http://10.172.246.234:7070/geoserver/cite/wms?service=WMS', {
+  const baseTile = L.tileLayer.wms('http://10.172.246.234:7070/geoserver/cite/wms?service=WMS&tiled=true', {
     layers: 'cite:china_map',
     transparent: true,
     minZoom: 3,
