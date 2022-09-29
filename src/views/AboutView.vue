@@ -28,6 +28,7 @@ onMounted(() => {
     new View({
       // projection: 'EPSG:4326',
       center: transform([114.357033, 30.577739], 'EPSG:4326', 'EPSG:3857'),
+      // center: fromLonLat([114.357033, 30.577739]),
       zoom: 16,
     })
   )
