@@ -1,8 +1,16 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+/*
+ * @Author: 阮志雄
+ * @Date: 2022-09-28 15:56:03
+ * @LastEditTime: 2022-09-30 11:14:17
+ * @LastEditors: 阮志雄
+ * @Description: In User Settings Edit
+ * @FilePath: \web-gis-vue3\src\router\index.ts
+ */
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
