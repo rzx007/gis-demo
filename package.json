@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "esri-leaflet": "^3.0.8",
+    "cesium": "^1.97.0",
     "leaflet": "^1.8.0",
     "ol": "^7.1.0",
     "pinia": "^2.0.21",
@@ -34,6 +34,7 @@
     "prettier": "^2.7.1",
     "typescript": "~4.7.4",
     "vite": "^3.0.9",
+    "vite-plugin-cesium": "^1.2.22",
     "vue-tsc": "^0.40.7"
   }
 }

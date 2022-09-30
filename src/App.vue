@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">OpenLayers</RouterLink>
         <RouterLink to="/leaflet">Leaflet</RouterLink>
-        <RouterLink to="/Imgs3d">3D</RouterLink>
+        <RouterLink to="/Imgs3d">3DMap</RouterLink>
       </nav>
     </div>
   </header>
